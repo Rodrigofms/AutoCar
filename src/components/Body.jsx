@@ -39,7 +39,13 @@ function Body({
                   {carro.marca} | {carro.modelo}
                 </h3>
                 <p>Ano: {carro.ano}</p>
-                <p>Preço: R${carro.preco}</p>
+                <p>
+                  Preço:{" "}
+                  {carro.preco.toLocaleString("pt-BR", {
+                    style: "currency",
+                    currency: "BRL",
+                  })}
+                </p>
               </div>
               <div className="carro-acoes">
                 {" "}
