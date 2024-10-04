@@ -5,6 +5,7 @@ function Body({
   handleSubmit,
   handleEdit,
   handleDelete,
+  handleReset,
   carros,
   marca,
   setMarca,
@@ -52,8 +53,8 @@ function Body({
       </div>
       {/* Formulário de Cadastro ou Edição */}
       <div className="form-card">
-        <h2>{editId ? "Editar veículo" : "Cadastrar Produto"}</h2>
-        <form onSubmit={handleSubmit}>
+        <h2>{editId ? "Editar veículo" : "Cadastrar veículo"}</h2>
+        <form onSubmit={handleSubmit} onReset={handleReset}>
           <label>
             Marca:
             <input
@@ -109,6 +110,7 @@ function Body({
             type="submit"
             value={editId ? "Editar" : "Cadastrar"}
           />
+          <input className="botaoReset" type="reset" value="Limpar" />
         </form>
       </div>
     </div>

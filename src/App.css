@@ -109,7 +109,7 @@ form input:focus {
   outline: none;
 }
 
-.botaoSubmit {
+.botaoSubmit, .botaoReset {
   margin-top: 1rem;
   background-color: var(--cor-botao-principal);
   color: #fff;
@@ -120,7 +120,7 @@ form input:focus {
   transition: background-color 0.3s ease, transform 0.3s;
 }
 
-.botaoSubmit:hover {
+.botaoSubmit:hover, .botaoReset:hover {
   background-color: var(--cor-botao-hover);
   transform: scale(1.05);
 }
